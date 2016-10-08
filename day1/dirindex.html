@@ -1,0 +1,38 @@
+<html>
+<head>
+
+</head>
+<body ng-app="DirectiveApp" >
+
+<div ng-controller="OtherController as my">
+  <div other-directive temp="mydirtem">
+  </div>
+</div>
+
+<div ng-controller="DirController as my">
+  Hello <input ng-model="my.name"> <hr/>
+  <span ng-bind="my.name"></span> <br/>
+  <span ng:bind="my.name"></span> <br/>
+  <span ng_bind="my.name"></span> <br/>
+  <span data-ng-bind="my.name"></span> <br/>
+  <span x-ng-bind="m.name"></span> <br/>
+  <div my-directive>
+
+  </div>
+
+  <div other-directive temp="mydirtem">
+
+  </div>
+
+  <div other-directive temp="yourdirtemp">
+
+  </div>
+
+  <restricted-directive name="my.myName">
+
+  </restricted-directive>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+ <script src="dirApp.js" charset="utf-8"></script>
+</body>
+</html>
